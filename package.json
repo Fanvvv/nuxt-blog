@@ -17,6 +17,7 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
+    "@unocss/nuxt": "^0.41.1",
     "nuxt": "3.0.0-rc.4"
   }
 }
