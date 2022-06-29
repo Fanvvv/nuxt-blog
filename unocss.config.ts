@@ -8,9 +8,20 @@ import {
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
+import type { Shortcut } from 'unocss'
+
+const customShortcuts: Shortcut[] = [
+  ['nextAnimate', 'absolute bottom-5 w-10 h-10 leading-10 text-center b-rd-5 b-1 cursor-pointer animate-bounce-alt animate-count-infinite animate-duration-1s']
+]
 
 export default defineConfig({
   shortcuts: [
+    ...customShortcuts,
+    ['fc', 'flex items-center'],
+    ['fcc', 'flex items-center justify-center'],
+    ['fcb', 'flex items-center justify-between'],
+    ['f-cc', 'flex flex-col items-center'],
+    ['f-cb', 'flex flex-col justify-between'],
     ['btn', 'px-4 py-1 rounded inline-block bg-teal-700 text-white cursor-pointer hover:bg-teal-800 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50'],
     ['icon-btn', 'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600'],
   ],
