@@ -288,7 +288,14 @@
   dependencies:
     mime "^3.0.0"
 
-"@iconify/types@^1.1.0":
+"@iconify-json/bi@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.npmmirror.com/@iconify-json/bi/-/bi-1.1.4.tgz#86d1f799a61abdeb314c27dafdf31a5139969c46"
+  integrity sha512-tamgPb9ulKU3baEmlGD8m+xNSbVOWGlzH9gDUKjiTXx9nE0OZmfLfyNATagXfNqzvY1FsnHh8l69ysDpODBnLw==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify/types@*", "@iconify/types@^1.1.0":
   version "1.1.0"
   resolved "https://registry.npmmirror.com/@iconify/types/-/types-1.1.0.tgz#dc15fc988b1b3fd558dd140a24ede7e0aac11280"
   integrity sha512-Jh0llaK2LRXQoYsorIH8maClebsnzTcve+7U3rQUSnC11X4jtPnFuyatqFLvMxZ8MLG8dB4zfHsbPfuvxluONw==
