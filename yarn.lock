@@ -295,6 +295,13 @@
   dependencies:
     "@iconify/types" "*"
 
+"@iconify-json/twemoji@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.npmmirror.com/@iconify-json/twemoji/-/twemoji-1.1.5.tgz#c657cafc8f17b3921d803758113a513990014061"
+  integrity sha512-1sTyrLUrMF7QhXS8a9XOd2ySgxgESQTRvhtN471QFdqIaXMi7oWB5UUFh0z984s/al4Iclet+O8BZfuhM9t7lg==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify/types@*", "@iconify/types@^1.1.0":
   version "1.1.0"
   resolved "https://registry.npmmirror.com/@iconify/types/-/types-1.1.0.tgz#dc15fc988b1b3fd558dd140a24ede7e0aac11280"
