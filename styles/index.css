@@ -9,8 +9,11 @@ html {
 html.dark {
   --f-bg: #171717;
 }
+
 html, body {
-  @apply m0 p0 scroll-smooth;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 a {
