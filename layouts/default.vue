@@ -6,4 +6,5 @@
     </main>
     <TheFooter />
   </div>
+  <Plum />
 </template>
