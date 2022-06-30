@@ -1,7 +1,14 @@
-html {
-  font-size: 16px;
+:root {
+  --f-bg: #fff;
 }
 
+html {
+  background-color: var(--f-bg);
+}
+
+html.dark {
+  --f-bg: #171717;
+}
 html, body {
   @apply m0 p0 scroll-smooth;
 }
