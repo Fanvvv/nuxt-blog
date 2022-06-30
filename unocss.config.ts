@@ -11,7 +11,7 @@ import {
 import type { Shortcut } from 'unocss'
 
 const customShortcuts: Shortcut[] = [
-  ['nextAnimate', 'absolute bottom-5 w-10 h-10 leading-10 text-center b-rd-5 b-1 cursor-pointer animate-bounce-alt animate-count-infinite animate-duration-1s']
+  ['nextAnimate', 'absolute bottom-5 cursor-pointer animate-bounce-alt animate-count-infinite animate-duration-1s']
 ]
 
 export default defineConfig({
