@@ -20,6 +20,8 @@
     "@iconify-json/bi": "^1.1.4",
     "@iconify-json/twemoji": "^1.1.5",
     "@unocss/nuxt": "^0.41.1",
+    "@vueuse/core": "^8.7.5",
+    "@vueuse/nuxt": "^8.7.5",
     "nuxt": "3.0.0-rc.4"
   }
 }
