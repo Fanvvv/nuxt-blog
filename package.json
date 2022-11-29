@@ -19,6 +19,7 @@
   "devDependencies": {
     "@iconify-json/bi": "^1.1.4",
     "@iconify-json/twemoji": "^1.1.5",
+    "@nuxt/content": "^2.2.2",
     "@unocss/nuxt": "^0.41.1",
     "@vueuse/core": "^8.7.5",
     "@vueuse/nuxt": "^8.7.5",
