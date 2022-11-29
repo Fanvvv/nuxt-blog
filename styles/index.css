@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 :root {
   --f-bg: #fff;
 }
@@ -18,4 +22,8 @@ html, body {
 
 a {
   @apply color-inherit decoration-none;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
 }
