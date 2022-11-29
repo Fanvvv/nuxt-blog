@@ -13,8 +13,8 @@
 
 <script setup lang="ts">
 import useTheme from '~/composables/useTheme'
+
 const { theme } = useTheme()
 
 const { width } = useWindowSize()
-
 </script>
