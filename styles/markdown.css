@@ -1,0 +1,25 @@
+.article, [article] {
+  max-width: 75ch;
+  font-size: 1rem;
+  line-height: 1.75;
+  font-family: dm,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+.article pre {
+  margin: .6rem 0;
+  padding: 1rem 1.5rem;
+  background-color: #F8F8F8;
+  overflow-x: auto;
+  border-radius: .5rem;
+}
+
+.dark .article pre {
+  background-color: #0E0E0E;
+}
+
+.article blockquote {
+  border-left: .25rem solid rgba(125,125,125,0.3);
+  quotes: "\201C""\201D""\2018""\2019";
+  margin: 1rem 0;
+  padding: .6rem 1.2rem;
+}
