@@ -1,5 +1,5 @@
 <template>
-  <div fixed top-0 bottom-0 left-0 right-0 pointer-events-none class="-z-2">
+  <div fixed top-0 bottom-0 left-0 right-0 pointer-events-none class="-z-3">
     <div class="static"></div>
     <div class="moving-1"></div>
     <div class="moving-2"></div>
