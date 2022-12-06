@@ -14,4 +14,11 @@
       </template>
     </ContentDoc>
   </div>
+  <div mt-10>
+    <a font-mono opacity-50 hover:opacity-75 text-lg border-gray border-b dark:text-gray-300 hover:cursor-pointer @click="router.back()">cd ..</a>
+  </div>
 </template>
+
+<script lang="ts" setup>
+const router = useRouter()
+</script>
