@@ -1,5 +1,5 @@
 .article, [article] {
-  max-width: 75ch;
+  max-width: 120ch;
   font-size: 1rem;
   line-height: 1.75;
   font-family: dm,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
@@ -8,7 +8,8 @@
 .article pre {
   margin: .6rem 0;
   padding: 1rem 1.5rem;
-  background-color: #F8F8F8;
+  /* background-color: #F8F8F8; */
+  background-color: #0E0E0E;
   overflow-x: auto;
   border-radius: .5rem;
 }
