@@ -5,9 +5,14 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Fan\' Bolg',
+      meta: [
+        { name: 'description', content: 'study programs and record life' },
+        { name: 'keywords', content: 'fan, blog, record, notes, frontend' }
+      ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/images/favicon.ico' },
       ],
+      viewport: 'width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0',
     }
   },
   modules: [
