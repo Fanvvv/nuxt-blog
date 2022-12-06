@@ -1,5 +1,5 @@
 <template>
-  <div mx-a max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0 min-w-sm font-sans>
+  <div mx-a max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0 font-sans>
     <TheHeader />
     <main min-h="[calc(100vh-330px)]">
       <slot />
@@ -7,7 +7,8 @@
     <TheFooter />
     <!-- <Plum /> -->
     <Sun v-show="theme !== 'dark' && width > 1000" />
-    <StarSky v-show="theme === 'dark'" />
+    <!-- <StarSky v-show="theme === 'dark'" /> -->
+    <Moon v-show="theme === 'dark' && width > 1000" />
   </div>
 </template>
 
