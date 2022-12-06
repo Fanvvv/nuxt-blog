@@ -11,19 +11,21 @@
 </template>
 
 <script lang="ts" setup>
+import { Ref } from 'vue'
 // const title = ref("星河随风而至，落日踏霞而归")
-const title = ref("不是一个厉害的 FrontEnd Developer")
+// const title = ref("不是一个厉害的 FrontEnd Developer")
+const title = ref("📖 记录是抵抗遗忘和丧失唯一的方式")
 
-const divRef = ref(null)
+const divRef: Ref<HTMLDivElement | null> = ref(null)
 onMounted(() => {
   divRef.value?.classList.add('show')
 })
 
-const heightRef = ref(null)
+const heightRef: Ref<HTMLDivElement | null> = ref(null)
 const handleScorll = () => {
   const height = heightRef.value?.offsetHeight
   // 盒子高度 + 100vh所减去的高度
-  document.documentElement.scrollTop = height + 140
+  document.documentElement.scrollTop = height! + 140
 }
 
 const iconArr = ['i-twemoji-carousel-horse', 'i-twemoji-carp-streamer', 'i-twemoji-bullseye', 'i-twemoji-clown-face', 'i-twemoji-confetti-ball', 'i-twemoji-cloud-with-snow']
