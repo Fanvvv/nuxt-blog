@@ -1,28 +1,38 @@
 <template>
   <div article font-mono dark:text-gray-300 my-0 mx-auto>
     <h1 text-center>全部文章</h1>
+    <div relative mt-5>
+      <input
+        aria-label="搜索 blog 里的文章"
+        type="text"
+        placeholder="搜索 blog 里的文章"
+        @change="(e) => searchValue = (e.target as HTMLInputElement).value"
+        block box-border w-full h-12 rounded-2xl border border-gray-300 px-4 py-2 text-gray focus:border-gray focus:ring-gray-500 dark:bg-transparent
+      />
+      <svg
+        absolute right-5 top-3 h-6 w-6 text-gray-400 dark:text-gray
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+        />
+      </svg>
+    </div>
     <ContentList>
       <template #default="{ list }">
-        <article v-for="article in sortArticles(list)" :key="article._id" py-6 my-2 border-gray border-b-2>
-          <header>
-            <h2>
-              <NuxtLink :to="article._path">{{ article.title }}</NuxtLink>
-            </h2>
-            <div mt-2 text-sm flex flex-col md:flex-row md:items-center>
-              <time text-grey-dark mr-1>{{ useFormatDate(article.createtime) }}</time>
-              <span hidden md:block text-grey-dark text-sm mx-1> | </span>
-              <ul list-none p-0 flex content-center mt-2 md:mt-0>
-                <li v-for="item in article.tags">
-                  <NuxtLink :to="article._path" font-bold mr-2 md:ml-1 text-blue-6 hover:text-blue-2 transition-all>{{ useToUpperCase(item) }}</NuxtLink>
-                </li>
-              </ul>
-            </div>
-          </header>
-          <p md:text-lg mt-4 md:mt-2>{{ article.description }}</p>
-          <div mt-3>
-            <NuxtLink :to="article._path" font-bold text-blue-6 hover:text-blue-2 transition-all>阅读更多...</NuxtLink>
-          </div>
-        </article>
+        <div v-if="!filteredBlogPosts(list)?.length">
+          暂无数据
+        </div>
+        <div v-else>
+          <ArticleCard v-if="filteredBlogPosts(list)?.length" :list="sortArticles(filteredBlogPosts(list))" />
+          <ArticleCard v-else :list="sortArticles(list)" />
+        </div>
       </template>
     </ContentList>
   </div>
@@ -30,10 +40,22 @@
 
 <script lang="ts" setup>
 import type { Article } from '~/types/Article'
+import ArticleCard from '~/components/ArticleCard.vue'
 
+// 通过时间排序
 function sortArticles(list: Article[]) {
   return list.sort((a, b) => {
     return new Date(b.createtime).getTime() - new Date(a.createtime).getTime()
+  })
+}
+
+const searchValue = ref('')
+
+// 通过标题、描述、标签等搜索过滤博客文章
+const filteredBlogPosts = (list: Article[]) => {
+  return list.filter((frontMatter) => {
+    const searchContent = frontMatter.title + frontMatter.description + frontMatter.tags.join(' ')
+    return searchContent.toLowerCase().includes(searchValue.value.toLowerCase())
   })
 }
 </script>
