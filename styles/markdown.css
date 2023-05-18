@@ -17,6 +17,21 @@
   border-radius: .5rem;
 }
 
+.content-doc pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+.content-doc pre::-webkit-scrollbar-track, 
+.content-doc pre::-webkit-scrollbar-corner {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.content-doc pre::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
 .dark .article pre {
   background-color: #0E0E0E;
 }
