@@ -1,7 +1,11 @@
+<style>
+@import '~/styles/markdown.css';
+</style>
+
 <template>
   <Progress />
   <div class="article" dark:text-gray-300 my-0 mx-auto>
-    <ContentDoc>
+    <ContentDoc class="content-doc">
       <template #empty>
         <h1>404</h1>
         <p>真遗憾，你所访问的页面我没写~~~~</p>

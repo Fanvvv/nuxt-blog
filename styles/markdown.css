@@ -1,14 +1,17 @@
 .article, [article] {
   max-width: 120ch;
-  font-size: 1rem;
+  font-size: 20px;
   line-height: 1.75;
   font-family: dm,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 
-.article pre {
+[article] {
+  font-size: 16px;
+}
+
+.content-doc pre {
   margin: .6rem 0;
   padding: 1rem 1.5rem;
-  /* background-color: #F8F8F8; */
   background-color: #0E0E0E;
   overflow-x: auto;
   border-radius: .5rem;
@@ -19,8 +22,54 @@
 }
 
 .article blockquote {
-  border-left: .25rem solid rgba(125,125,125,0.3);
-  quotes: "\201C""\201D""\2018""\2019";
+  padding: 1.5rem 1rem;
+  margin: 2rem 0;
+  font-weight: bold;
+  border: 1px solid rgb(226, 232, 240);
+  background-color: rgb(248, 250, 252);
+  border-radius: 1rem;
+}
+
+.dark .article blockquote {
+  background-color: #0E0E0E;
+}
+
+.content-doc h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  margin: 1.8rem 0;
+}
+
+.content-doc h2 {
+  font-size: 2.3rem;
+  margin: 1.2rem 0 .8rem 0;
+}
+
+.content-doc h3 {
+  font-size: 2rem;
+  margin: 1rem 0 .6rem 0;
+}
+
+.content-doc h4 {
+  font-size: 1.7rem;
+  margin: 1rem 0 .3rem 0;
+}
+
+.content-doc p {
   margin: 1rem 0;
-  padding: .6rem 1.2rem;
+}
+
+.content-doc strong {
+  color: #B8A965;
+}
+
+.content-doc li {
+  margin: .6rem;
+}
+
+.content-doc code {
+  color: #6394BF;
+  background: rgba(0, 0, 0, .2);
+  padding: .3rem .5rem;
+  border-radius: .5rem;
 }
