@@ -18,16 +18,17 @@ export default defineNuxtConfig({
   modules: [
     '@unocss/nuxt',
     '@vueuse/nuxt',
+    '@vueuse/motion/nuxt',
     '@nuxt/content',
     '@nuxtjs/color-mode',
   ],
   content: {
     highlight: {
-      theme: 'vitesse-dark',
+      theme: 'vitesse-dark',  // All theme 可以进入 https://github.com/shikijs/shiki/blob/main/docs/themes.md 查看
     },
     markdown: {
       toc: {
-        depth: 3,
+        depth: 3, // 侧边栏 文章标题深度
       },
     },
     documentDriven: true,

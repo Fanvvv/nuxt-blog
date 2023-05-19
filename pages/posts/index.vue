@@ -1,5 +1,5 @@
 <template>
-  <div article font-mono dark:text-gray-300 my-0 mx-auto>
+  <div article font-mono dark:text-gray-300 my-0 mx-auto v-motion-slide-visible-bottom>
     <h1 text-center>全部文章</h1>
     <div relative mt-5>
       <input

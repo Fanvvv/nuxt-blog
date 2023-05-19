@@ -1,6 +1,6 @@
 <template>
   <div relative z-5 fc flex-col min-h="[calc(100vh-330px)]" ref="heightRef">
-    <div my-30 w-40 h-40 border-rounded-4>
+    <div my-30 w-40 h-40 border-rounded-4 v-motion-pop-visible>
       <img w-40 h-40 border-rounded-40 transition-all duration-500 ease-in-out class="hover" src="/images/me.png" alt="" />
     </div>
     <div ref="divRef" px-4 text-center text-3xl md:text-4xl dark:text-gray-100>
@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Ref } from 'vue'
+import type { Ref } from 'vue'
 // const title = ref("星河随风而至，落日踏霞而归")
 // const title = ref("不是一个厉害的 FrontEnd Developer")
 const title = ref("📖 记录是抵抗遗忘和丧失唯一的方式")
