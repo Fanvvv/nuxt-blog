@@ -88,3 +88,37 @@
   padding: .3rem .5rem;
   border-radius: .5rem;
 }
+
+.content-doc p a {
+  position: relative;
+  margin-right: 1rem;
+  text-decoration: underline;
+  text-decoration-color: rgba(14,165,220, .5);
+}
+
+.content-doc p a:hover {
+  text-decoration: underline;
+  text-decoration-color: rgba(14,165,235, 1);
+}
+
+.content-doc p a::before {
+  content: "🔗"; 
+  position: absolute;
+  top: -.1rem;
+  right: -1rem;
+  font-size: .8rem;
+  color: #000;
+}
+
+.content-doc h2 a {
+  text-decoration: underline;
+  text-decoration-color: #C98A7D;
+}
+.content-doc h3 a {
+  text-decoration: underline;
+  text-decoration-color: #6394BF;
+}
+.content-doc h4 a {
+  text-decoration: underline;
+  text-decoration-color: #E0A569;
+}
