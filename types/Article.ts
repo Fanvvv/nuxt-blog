@@ -16,6 +16,6 @@ export type Article = {
   excerpt: object,
   tags: string[],
   uid?: number,
-  createtime: string,
+  date: string,
   body: object,
 }
