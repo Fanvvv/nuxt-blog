@@ -1,16 +1,27 @@
+<style scoped>
+.posts-container {
+  @apply font-mono dark:text-gray-300 my-0 mx-auto v-motion-slide-visible-bottom;
+}
+.input-style {
+  @apply block box-border w-full h-12 rounded-2xl border border-gray-300 px-4 py-2 text-gray focus:border-gray focus:ring-gray-500 dark:bg-transparent;
+}
+.search-icon {
+  @apply absolute right-5 top-3 h-6 w-6 text-gray-400 dark:text-gray;
+}
+</style>
 <template>
-  <div article font-mono dark:text-gray-300 my-0 mx-auto v-motion-slide-visible-bottom>
+  <div article class="posts-container">
     <h1 text-center>全部文章</h1>
     <div relative mt-5>
       <input
         aria-label="搜索 blog 里的文章"
         type="text"
         placeholder="搜索 blog 里的文章"
-        @change="(e) => searchValue = (e.target as HTMLInputElement).value"
-        block box-border w-full h-12 rounded-2xl border border-gray-300 px-4 py-2 text-gray focus:border-gray focus:ring-gray-500 dark:bg-transparent
+        @input="(e) => searchValue = (e.target as HTMLInputElement).value"
+        class="input-style"
       />
       <svg
-        absolute right-5 top-3 h-6 w-6 text-gray-400 dark:text-gray
+        class="search-icon"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -45,7 +56,7 @@ import ArticleCard from '~/components/ArticleCard.vue'
 // 通过时间排序
 function sortArticles(list: Article[]) {
   return list.sort((a, b) => {
-    return new Date(b.createtime).getTime() - new Date(a.createtime).getTime()
+    return new Date(b.date).getTime() - new Date(a.date).getTime()
   })
 }
 
