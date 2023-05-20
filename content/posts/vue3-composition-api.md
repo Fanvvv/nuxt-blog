@@ -2,12 +2,8 @@
 title: "Vue3 的 Composition API"
 description: "vue 的 data 选项里返回的数据是响应式的，在 vue3 的 setup 函数中想要返回的数据也拥有响应式的特性，应该怎么办呢？"
 tags: [vue]
-uid: 104
-createtime: 2022-3-6
+date: 2022-3-6
 ---
-
-:Toc
-:BackAndTop
 
 # 响应式API
 

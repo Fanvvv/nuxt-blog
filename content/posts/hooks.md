@@ -2,12 +2,8 @@
 title: "React 内置 Hooks"
 description: "React 中有一些内置的 Hooks，比如：useState、useEffect... 需要学习它们的使用方法、应用场景、最佳实践等。"
 tags: [react]
-uid: 103
-createtime: 2022-2-8
+date: 2022-2-8
 ---
-
-:Toc
-:BackAndTop
 
 ## useState
 
