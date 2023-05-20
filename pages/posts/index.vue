@@ -1,16 +1,5 @@
-<style scoped>
-.posts-container {
-  @apply font-mono dark:text-gray-300 my-0 mx-auto v-motion-slide-visible-bottom;
-}
-.input-style {
-  @apply block box-border w-full h-12 rounded-2xl border border-gray-300 px-4 py-2 text-gray focus:border-gray focus:ring-gray-500 dark:bg-transparent;
-}
-.search-icon {
-  @apply absolute right-5 top-3 h-6 w-6 text-gray-400 dark:text-gray;
-}
-</style>
 <template>
-  <div article class="posts-container">
+  <div article font-mono dark:text-gray-300 my-0 mx-auto v-motion-slide-visible-bottom>
     <h1 text-center>全部文章</h1>
     <div relative mt-5>
       <input
@@ -18,10 +7,10 @@
         type="text"
         placeholder="搜索 blog 里的文章"
         @input="(e) => searchValue = (e.target as HTMLInputElement).value"
-        class="input-style"
+        block box-border w-full h-12 rounded-2xl border border-gray-300 px-4 py-2 text-gray focus:border-gray focus:ring-gray-500 dark:bg-transparent
       />
       <svg
-        class="search-icon"
+        absolute right-5 top-3 h-6 w-6 text-gray-400 dark:text-gray
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"

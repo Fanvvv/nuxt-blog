@@ -1,10 +1,4 @@
 <style scoped>
-.fixed-container {
-  @apply fixed right-8 bottom-8 hidden flex-col gap-3 md:flex md:block;
-}
-.dark-hover {
-  @apply dark:text-gray-100 hover:cursor-pointer;
-}
 .btn-nem {
   width: 50px;
   height: 50px;
@@ -35,8 +29,8 @@
 </style>
 
 <template>
-  <div class="fixed-container">
-    <button class="btn-nem dark-hover" @click="goToTop" v-show="showTop">
+  <div fixed right-8 bottom-8 hidden flex-col gap-3 md:flex md:block>
+    <button dark:text-gray-100 hover:cursor-pointer class="btn-nem" @click="goToTop" v-show="showTop">
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
         width="24" 
@@ -52,7 +46,7 @@
         <path d="M17 11l-5-5-5 5M17 18l-5-5-5 5"/>
       </svg>
     </button>
-    <button class="btn-nem dark-hover" @click="goToDown" v-show="showDown">
+    <button dark:text-gray-100 hover:cursor-pointer class="btn-nem" @click="goToDown" v-show="showDown">
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
         width="24" 
@@ -68,7 +62,7 @@
         <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
       </svg>
     </button>
-    <button class="btn-nem dark-hover" @click="router.back()">
+    <button dark:text-gray-100 hover:cursor-pointer class="btn-nem" @click="router.back()">
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
         width="24" 
