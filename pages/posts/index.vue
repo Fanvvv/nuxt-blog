@@ -26,7 +26,7 @@
     </div>
     <ContentList>
       <template #default="{ list }">
-        <div v-if="!filteredBlogPosts(list)?.length">
+        <div v-if="!filteredBlogPosts(list)?.length" text-2xl text-red text-center mt-50>
           暂无数据
         </div>
         <div v-else>
