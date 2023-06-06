@@ -1,7 +1,7 @@
 <template>
   <div relative z-5 fc flex-col min-h="[calc(100vh-330px)]" ref="heightRef">
     <div my-30 w-40 h-40 border-rounded-4 v-motion-pop-visible>
-      <img w-40 h-40 border-rounded-40 transition-all duration-500 ease-in-out class="hover" src="/images/me.png" alt="" />
+      <img w-40 h-40 border-rounded-40 transition-all duration-500 ease-in-out hover:transition hover:duration-500 hover:scale-150 src="/images/me.png" alt="" />
     </div>
     <div ref="divRef" px-4 text-center text-3xl md:text-4xl dark:text-gray-100>
       <span op-0 transition-opacity font-mono v-for="(item, index) in title" :key="index" :style="`transition-delay: ${0.2 * (index + 1)}s`">{{ item }}</span>
@@ -37,9 +37,5 @@ const randomIcon = () => {
 <style scoped>
 .show > span {
   opacity: 1;
-}
-.hover:hover {
-  transition: transform 0.5s;
-  transform: scale(1.5);
 }
 </style>
