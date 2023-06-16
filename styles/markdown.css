@@ -110,6 +110,10 @@
   color: #000;
 }
 
+.content-doc p img {
+  max-width: 100%
+}
+
 .content-doc h2 a {
   text-decoration: underline;
   text-decoration-color: #C98A7D;
